@@ -4,7 +4,7 @@
 match(inferred_content_type()) {
   with(/html/) {
 
-    //protect_xmlns()
+    //protect_xmlns()  #Removed to work on Moovweb 5.3. Comment in if on 4.7 to 5.1 
 
     # Force UTF-8 encoding. If you'd like to auto-detect the encoding,
     # simply remove the "UTF-8" argument.  e.g. html(){ ... }
@@ -12,9 +12,9 @@ match(inferred_content_type()) {
       @import "html.ts"
     }
 
-    //restore_xmlns()
+    //restore_xmlns()  #Removed to work on Moovweb 5.3. Comment in if on 4.7 to 5.1 
 
-    //restore_dollar_sign()
+    //restore_dollar_sign() #Removed to work on Moovweb 5.3. Comment in if on 4.7 to 5.1 
   }
   
   else() {
