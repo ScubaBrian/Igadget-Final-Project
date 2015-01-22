@@ -7,8 +7,7 @@ $("./body") {
          insert("div", class: "mw_header_bottom") {
          insert("div", class: "mw_search")
          insert("div", class: "mw_menu_btn sprites-menu", data-ur-toggler-component: "button")
-       }
-       
+       }       
     }
 
     $(".//div[@class='mw_search']") {
@@ -17,16 +16,14 @@ $("./body") {
         $("./form") {
           remove("./label")
           $("./input[@type='text']") {
-            attribute("placeholder", "Search...")
+            attribute("placeholder", "Search For Item")
           }
           $("./input[@type='image']") {
             wrap("div", class: "mw_search_btn buttons-search")
           }
         }
       }
-    }      
-    
-    
+    }     
 
     $("..//div[@class='mw_menu_btn']") {
       attribute("data-ur-toggler-component", "button")
@@ -54,30 +51,41 @@ $("./body") {
     remove(".//div[@id='SideNewsletterBox']")
     remove(".//span[@class='FeedLink FloatRight']//ancestor::h2")
 
-        $(".//div[@id='Wrapper']") {
+      $(".//div[@id='Wrapper']") {
 
-        $(".//div[@id='LayoutColumn2']") {
-         attribute("data-ur-set", "toggler")  
-         }  
-        
-        $$("h2") { 
-          wrap("div", class: "toggle_button")         
-         attribute("data-ur-set-component", "button") 
-        } 
-        
-        $("//ul[@class='ProductList']") {          
-          attribute("data-ur-set-component", "content") 
-      //    attribute("data-ur-carousel-component", "scroll_container")
-      //    wrap("div", data-ur-set: "carousel", data-ur-autoscroll: "enabled") 
-      //  } 
-      //  $("//li[@class='Odd']") {
-      //    attribute("data-ur-carousel-component", "item")
-      //  }
-      //   $("//li[@class='Even']") {
-      //    attribute("data-ur-carousel-component", "item")
+      $(".//div[@id='LayoutColumn2']") {
+       attribute("data-ur-set", "toggler")  
+       }  
+      
+      $$("h2") { 
+        wrap("div", class: "toggle_button")         
+       attribute("data-ur-set-component", "button") 
+      } 
+      
+      /*$(".//div[contains(@class,'FeaturedProducts')][1]") {
+        attribute("style","display: inline-block;")          
+        attribute("data-ur-set-component", "content") 
+        attribute("data-ur-carousel-component", "scroll_container")
+        wrap("div", data-ur-set: "carousel", data-ur-autoscroll: "enabled") 
+        $(".//ul[contains(@class,'ProductList')]"){
+           $(".//li[@class='Odd']") {
+            attribute("data-ur-carousel-component", "item")
+           }
+           $("//li[@class='Even']") {
+            attribute("data-ur-carousel-component", "item")
+          }
         }
-     } 
-   }
+      }*/    
+    }
+  }
+    
+   
+     
+    
+  
+
+
+
     
    
      
