@@ -4,7 +4,7 @@
 match(inferred_content_type()) {
   with(/html/) {
 
-    protect_xmlns()
+    //protect_xmlns()
 
     # Force UTF-8 encoding. If you'd like to auto-detect the encoding,
     # simply remove the "UTF-8" argument.  e.g. html(){ ... }
@@ -12,9 +12,9 @@ match(inferred_content_type()) {
       @import "html.ts"
     }
 
-    restore_xmlns()
+    //restore_xmlns()
 
-    restore_dollar_sign()
+    //restore_dollar_sign()
   }
   
   else() {
